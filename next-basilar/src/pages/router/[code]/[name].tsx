@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 export default function searchAndName(): JSX.Element {
@@ -8,6 +9,11 @@ export default function searchAndName(): JSX.Element {
     return (
         <div>
             <h1>Rota / {code} / {name} /</h1>
+            <Link href="/router">
+                <a>
+                    Voltar
+                </a>
+            </Link>
         </div>
     )
 }
