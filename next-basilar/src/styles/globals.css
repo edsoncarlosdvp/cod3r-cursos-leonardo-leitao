@@ -15,6 +15,14 @@ a {
   box-sizing: border-box;
 }
 
+ul {
+  background-color: #999999;
+}
+
 li {
   margin: 5px 0;
+}
+
+button {
+  margin: 5px;
 }
