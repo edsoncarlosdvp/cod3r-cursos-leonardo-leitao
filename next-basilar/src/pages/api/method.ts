@@ -1,4 +1,4 @@
-export default (req, res) => {
+export default (req: any, res: any) => {
   if (req.method === "GET") {
     res.status(200).json({ nome: "Pedro" });
   } else {
