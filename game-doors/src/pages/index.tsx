@@ -1,7 +1,7 @@
-export default function Home() {
-  return (
-    <div>
+import { Gif } from "../components/Gif";
 
-    </div>
-  )
+export default function Home() {
+    return (
+        <Gif />
+    )
 }
