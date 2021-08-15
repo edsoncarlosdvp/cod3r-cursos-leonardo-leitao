@@ -2,7 +2,7 @@ export default function question(req: { method: string; query: { id: any } }, re
     if (req.method === 'GET') {
         get(req, res)
     } else {
-        res.status(404).send()
+        res.status(405).send()
     }
 }
 
