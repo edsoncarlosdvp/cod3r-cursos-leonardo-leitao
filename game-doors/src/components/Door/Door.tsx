@@ -1,11 +1,9 @@
-import { ContainerDoor, NumberDoor } from './'
+import { ContainerDoor, NumberDoor } from './DoorStyles'
 
-const Door = (): JSX.Element => {
+export default function Door(): JSX.Element {
     return (
         <ContainerDoor>
-            <NumberDoor />
+            <NumberDoor>3</NumberDoor>
         </ContainerDoor>
     )
 }
-
-export default Door

@@ -12,7 +12,8 @@ const ContainerDoor = styled.div`
     height: 310px;
 `
 
-const NumberDoor = styled.span`
+const NumberDoor = styled.div`
+    color: white;
     font-size: 3rem;
 `
 
