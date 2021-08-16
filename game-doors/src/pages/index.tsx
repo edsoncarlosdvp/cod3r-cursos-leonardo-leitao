@@ -1,7 +1,7 @@
-import { Gif } from "../components/Gif";
+import { ContainerDoor } from "../components/Door"
 
 export default function Home() {
     return (
-        <Gif />
+        <ContainerDoor />
     )
 }
