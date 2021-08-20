@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const Container = styled.div`
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,14 +29,24 @@ const Frame = styled.div`
     border-left: 5px brown solid;
 `;
 
+const NumberDoor = styled.span`
+    font-size: 3rem;
+`;
+
+const Knob = styled.span`
+    position: absolute;
+    align-self: flex-start;
+    top: calc(0.45 * var(--hight-door));
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: brown;
+`;
+
 const Floor = styled.div`
     width: 100%;
     height: 10px;
     background-color: #ddd;
 `;
 
-const NumberDoor = styled.span`
-    font-size: 3rem;
-`;
-
-export { Container, Frame, Content, Floor, NumberDoor };
+export { Container, Frame, Content, NumberDoor, Knob, Floor };
