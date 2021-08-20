@@ -1,12 +1,14 @@
 import { Gif } from '../Gif'
-import { ContainerDoor, NumberDoor } from './DoorStyles'
+import { Container, Frame, Content, NumberDoor } from './DoorStyles'
 
 export const Door = (): JSX.Element => {
     return (
-        <>
-            <ContainerDoor>
-                <NumberDoor>3</NumberDoor>
-            </ContainerDoor>
-        </>
+        <Container>
+            <Frame>
+                <Content>
+                    <NumberDoor>3</NumberDoor>
+                </Content>
+            </Frame>
+        </Container>
     )
 }
