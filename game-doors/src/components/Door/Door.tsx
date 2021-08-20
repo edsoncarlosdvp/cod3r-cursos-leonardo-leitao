@@ -1,5 +1,5 @@
 import { Gif } from '../Gif'
-import { Container, Frame, Content, NumberDoor } from './DoorStyles'
+import { Container, Frame, Content, Floor, NumberDoor } from './DoorStyles'
 
 export const Door = (): JSX.Element => {
     return (
@@ -9,6 +9,7 @@ export const Door = (): JSX.Element => {
                     <NumberDoor>3</NumberDoor>
                 </Content>
             </Frame>
+            <Floor />
         </Container>
     )
 }

@@ -3,6 +3,10 @@
     --hight-door: 310px;
 }
 
+html {
+    background-color: #00000075;
+}
+
 html,
 body {
     padding: 0;
