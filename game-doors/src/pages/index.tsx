@@ -7,7 +7,7 @@ export default function Home(): JSX.Element {
     const [p1, setP1] = useState(new DoorModel(1))
     return (
         <Container>
-            <Door value={p1} />
+            <Door value={p1} onChange={newDoor => setP1(newDoor)} />
         </Container>
     )
 }
