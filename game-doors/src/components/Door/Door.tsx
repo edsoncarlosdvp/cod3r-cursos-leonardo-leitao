@@ -1,13 +1,18 @@
-import { Gif } from '../Gif'
+import DoorModel from '../../model/DoorModel'
 import { Container, Frame, Content, NumberDoor, Knob, Selected, Floor } from './DoorStyles'
 
-export const Door = (props: { Selected: string }): JSX.Element => {
+interface DoorProps {
+    door: DoorModel
+}
+
+export const Door = (props: DoorProps): JSX.Element => {
+    const { door } = props
     const selected = props.Selected ? props.Selected : ''
     return (
         <Container>
             <Frame className={`${selected}`}>
                 <Content>
-                    <NumberDoor>3</NumberDoor>
+                    <NumberDoor>{door.num}</NumberDoor>
                     <Knob />
                 </Content>
             </Frame>
