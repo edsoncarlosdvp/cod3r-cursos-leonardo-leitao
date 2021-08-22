@@ -52,6 +52,11 @@ const Selected = styled.span<SelectedX>`
     border-right: 5px yellow solid;
     border-left: 5px yellow solid;
 `;
+// .Selected {
+//     borderTop: 5px yellow solid;
+//     borderRight: 5px yellow solid;
+//     borderLeft: 5px yellow solid;
+// }
 
 const Floor = styled.div`
     width: 100%;
