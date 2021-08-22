@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface SelectedX {
+    borderColor: string;
+}
+
 const Container = styled.div`
     position: relative;
     display: flex;
@@ -43,10 +47,16 @@ const Knob = styled.span`
     background-color: brown;
 `;
 
+const Selected = styled.span<SelectedX>`
+    border-top: 5px yellow solid;
+    border-right: 5px yellow solid;
+    border-left: 5px yellow solid;
+`;
+
 const Floor = styled.div`
     width: 100%;
     height: 10px;
     background-color: #ddd;
 `;
 
-export { Container, Frame, Content, NumberDoor, Knob, Floor };
+export { Container, Frame, Content, NumberDoor, Knob, Selected, Floor };
