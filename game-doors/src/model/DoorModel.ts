@@ -43,7 +43,7 @@ export default class DoorModel {
     }
 
     open() {
-        const openning = true;
+        const opening = true;
         return new DoorModel(this.num, this.haveGif, this.selected, opening);
     }
 }
