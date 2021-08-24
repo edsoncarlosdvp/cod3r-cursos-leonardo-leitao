@@ -7,3 +7,18 @@ export function createDoors(qtd: number, selected: number): DoorModel[] {
         return new DoorModel(num, haveGif)
     })
 }
+
+export function refreshDoors(
+    doors: DoorModel[],
+    doorModify: DoorModel
+): DoorModel[] {
+    return doors.map(doorActual => {
+        const equalModify = doorActual.num === doorModify.num
+
+        if (equalModify) {
+            return doorModify
+        } else {
+            return doorModify.open() ? doorActual : doorActual.notSelected()
+        }
+    })
+}
