@@ -1,8 +1,9 @@
 export default class DoorModel {
-    #num: number;
-    #haveGif: boolean;
-    #selected: boolean;
-    #opening: boolean;
+    [x: string]: any
+    #num: number
+    #haveGif: boolean
+    #selected: boolean
+    #opening: boolean
 
     constructor(
         num: number,
@@ -10,40 +11,44 @@ export default class DoorModel {
         selected = false,
         opening = false
     ) {
-        this.#num = num;
-        this.#haveGif = haveGif;
-        this.#selected = selected;
-        this.#opening = opening;
+        this.#num = num
+        this.#haveGif = haveGif
+        this.#selected = selected
+        this.#opening = opening
     }
 
     get num() {
-        return this.#num;
+        return this.#num
     }
 
     get havaGif() {
-        return this.#haveGif;
+        return this.#haveGif
     }
 
     get selected() {
-        return this.#selected;
+        return this.#selected
     }
 
     get opening() {
-        return this.#opening;
+        return this.#opening
+    }
+
+    get closed() {
+        return !this.#opening
     }
 
     notSelected() {
-        const selected = false;
-        return new DoorModel(this.num, this.haveGif, selected, this.opening);
+        const selected = false
+        return new DoorModel(this.num, this.haveGif, selected, this.opening)
     }
 
     changeSelected() {
-        const selected = !this.selected;
-        return new DoorModel(this.num, this.haveGif, selected, this.opening);
+        const selected = !this.selected
+        return new DoorModel(this.num, this.haveGif, selected, this.opening)
     }
 
     open() {
-        const opening = true;
-        return new DoorModel(this.num, this.haveGif, this.selected, opening);
+        const opening = true
+        return new DoorModel(this.num, this.haveGif, this.selected, opening)
     }
 }

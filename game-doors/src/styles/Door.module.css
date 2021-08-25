@@ -25,6 +25,7 @@
     border-top      : 5px brown solid;
     border-right    : 5px brown solid;
     border-left     : 5px brown solid;
+    flex-direction  : column-reverse;
 }
 
 .num {
