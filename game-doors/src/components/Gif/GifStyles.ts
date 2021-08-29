@@ -4,8 +4,8 @@ import { CardGiftcard } from '@material-ui/icons'
 const Container = styled.div``
 
 const GifIcon = styled(CardGiftcard)`
-    font-size: 35px;
-    color: green;
+    font-size: 135px;
+    color: yellow;
 `
 
 export { Container, GifIcon }

@@ -1,4 +1,4 @@
-import { Gif } from '@material-ui/icons'
+import { GifIcon } from '../Gif'
 import DoorModel from '../../model/DoorModel'
 import styles from '../../styles/Door.module.css'
 //import { Container, Frame, Content, NumberDoor, Knob, Selected, Floor } from './DoorStyles'
@@ -29,7 +29,7 @@ export const Door = (props: DoorProps): JSX.Element => {
     return (
         <div className={styles.container} onClick={changeSelected}>
             <div className={`${styles.frame} ${selected}`}>
-                {door.closed ? renderDoor() : door.haveGif ? <Gif /> : false}
+                {door.closed ? renderDoor() : door.haveGif ? <GifIcon /> : false}
             </div>
             <div className={styles.floor}></div>
         </div>
