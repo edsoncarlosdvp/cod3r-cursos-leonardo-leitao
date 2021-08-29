@@ -1,5 +1,4 @@
 export default class DoorModel {
-    [x: string]: any
     #num: number
     #haveGif: boolean
     #selected: boolean
@@ -34,21 +33,21 @@ export default class DoorModel {
     }
 
     get closed() {
-        return !this.#opening
+        return !this.opening
     }
 
     notSelected() {
         const selected = false
-        return new DoorModel(this.num, this.haveGif, selected, this.opening)
+        return new DoorModel(this.num, this.#haveGif, selected, this.opening)
     }
 
     changeSelected() {
         const selected = !this.selected
-        return new DoorModel(this.num, this.haveGif, selected, this.opening)
+        return new DoorModel(this.num, this.#haveGif, selected, this.opening)
     }
 
     open() {
         const opening = true
-        return new DoorModel(this.num, this.haveGif, this.selected, opening)
+        return new DoorModel(this.num, this.#haveGif, this.selected, opening)
     }
 }

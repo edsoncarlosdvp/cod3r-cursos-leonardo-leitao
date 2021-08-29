@@ -1,5 +1,5 @@
-import { GifIcon } from '../Gif'
-import DoorModel from '../../model/DoorModel'
+import { GifIconStyles } from '@components/Gif'
+import DoorModel from '@model/DoorModel'
 import styles from '../../styles/Door.module.css'
 //import { Container, Frame, Content, NumberDoor, Knob, Selected, Floor } from './DoorStyles'
 
@@ -12,7 +12,7 @@ export const Door = (props: DoorProps): JSX.Element => {
     const door = props.value
     const selected = door.selected && !door.opening ? styles.selected : ''
     const changeSelected = (e: any) => props.onChange(door.changeSelected())
-    const open = (e: any) => {
+    const open = (e: { stopPropagation: () => void }) => {
         e.stopPropagation()
         props.onChange(door.open())
     }
@@ -29,7 +29,7 @@ export const Door = (props: DoorProps): JSX.Element => {
     return (
         <div className={styles.container} onClick={changeSelected}>
             <div className={`${styles.frame} ${selected}`}>
-                {door.closed ? renderDoor() : door.haveGif ? <GifIcon /> : false}
+                {door.closed ? renderDoor() : door.havaGif ? <GifIconStyles /> : false}
             </div>
             <div className={styles.floor}></div>
         </div>

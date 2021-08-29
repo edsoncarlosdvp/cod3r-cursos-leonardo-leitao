@@ -18,7 +18,7 @@ export function refreshDoors(
         if (equalModify) {
             return doorModify
         } else {
-            return doorModify.open() ? doorActual : doorActual.notSelected()
+            return doorModify.opening ? doorActual : doorActual.notSelected()
         }
     })
 }

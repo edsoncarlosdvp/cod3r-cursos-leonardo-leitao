@@ -1,9 +1,10 @@
-import { Container, GifIcon } from './GifStyles'
+import { Container, GifIconStyles } from './index'
+import styles from '../../styles/Door.module.css'
 
 export const Gif = (): JSX.Element => {
     return (
         <Container>
-            <GifIcon />
+            <GifIconStyles>Texto</GifIconStyles>
         </Container>
     )
 }

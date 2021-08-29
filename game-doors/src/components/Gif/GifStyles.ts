@@ -1,11 +1,14 @@
 import styled from 'styled-components'
-import { CardGiftcard } from '@material-ui/icons'
+import CardGiftcard from '@material-ui/icons/CardGiftcard'
 
-const Container = styled.div``
-
-const GifIcon = styled(CardGiftcard)`
-    font-size: 135px;
-    color: yellow;
+const Container = styled.div`
+    background-color: red;
 `
 
-export { Container, GifIcon }
+const GifIconStyles = styled(CardGiftcard)`
+        width: 5rem !important;
+        height: 5rem !important;
+        color: yellow;
+`
+
+export { Container, GifIconStyles }
