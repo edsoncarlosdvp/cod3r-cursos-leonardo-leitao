@@ -19,15 +19,14 @@
 }
 
 .frame {
-    flex-grow          : 1;
-    display            : flex;
-    flex-direction     : column-reverse;
-    width              : 90%;
-    background-color   : #0005;
-    border-top         : 5px brown solid;
-    border-right       : 5px brown solid;
-    border-left        : 5px brown solid;
-    /* flex-direction  : column-reverse; */
+    flex-grow       : 1;
+    display         : flex;
+    flex-direction  : column-reverse;
+    width           : 90%;
+    background-color: #0005;
+    border-top      : 5px brown solid;
+    border-right    : 5px brown solid;
+    border-left     : 5px brown solid;
 }
 
 .num {

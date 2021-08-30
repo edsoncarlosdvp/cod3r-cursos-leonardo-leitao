@@ -1,20 +1,7 @@
-import { useState } from 'react'
-import { Door } from '../components/Door'
-import { createDoors, refreshDoors } from '../features/Doors'
-import { Container } from '@styles/home'
-
 export default function Home(): JSX.Element {
-    const [doors, setDoors] = useState(createDoors(3, 1))
-
-    function renderDoors() {
-        return doors.map(door => {
-            return <Door key={door.num} value={door} onChange={newDoor => setDoors(refreshDoors(doors, newDoor))} />
-        })
-    }
-
     return (
-        <Container>
-            {renderDoors()}
-        </Container>
+        <div>
+            <h1>Início do Jogo</h1>
+        </div>
     )
 }
