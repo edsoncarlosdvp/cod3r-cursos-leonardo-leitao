@@ -1,9 +1,9 @@
 import DoorModel from '@model/DoorModel'
 
-export function createDoors(qtd: number, selected: number): DoorModel[] {
+export function createDoors(qtd: number, doorWithGif: number): DoorModel[] {
     return Array.from({ length: qtd }, (_, i) => {
         const num = i + 1
-        const haveGif = num === selected
+        const haveGif = num === doorWithGif
         return new DoorModel(num, haveGif)
     })
 }
