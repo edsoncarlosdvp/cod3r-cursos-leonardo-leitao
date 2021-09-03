@@ -1,9 +1,19 @@
 import { Container } from './'
 
-export default function Card(props) {
+// interface CardProps {
+//     bgcolor?: string
+// }
+
+interface CardProps {
+    bgcolor?: string
+    color?: string
+    children?: any
+}
+
+export const Card = (props: CardProps): JSX.Element => {
     return (
-        <Container>
-            <h1>Card</h1>
+        <Container style={{ backgroundColor: props.bgcolor ?? "white", color: props.bgcolor ?? "blue" }}>
+            {props.children}
         </Container>
     )
 }

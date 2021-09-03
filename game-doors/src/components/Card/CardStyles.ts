@@ -1,14 +1,19 @@
 import styled from 'styled-components'
 
-interface ContainerProps{
-    bgcolor: string
-}
+// interface CardProps{
+//     bgcolor?: string
+//     color?: string
+//     children?: string
+// }
 
-const Container = styled.div<ContainerProps>`
+const Container = styled.div`
     display: flex;
     width: 300px;
     height: 300px;
-    background-color: ${props => props.bgcolor ?? '#ffffff'};
+    /* background-color: ${props => props.bgcolor ?? '#ffffff'};
+    color: ${props => props.color ?? 'pink'}; */
+    padding: 20px;
+    margin: 5px;
 `
 
 export { Container }
