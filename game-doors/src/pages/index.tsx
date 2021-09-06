@@ -1,7 +1,7 @@
 import { SetStateAction, useState } from 'react'
 import { Card } from '@components/Card/Card'
 import { Container, Content, LinkStyles } from '@components/Form'
-import { EntryNumeric } from '@components/EntryNumeric'
+import EntryNum from '@components/EntryNumeric/EntryNumeric'
 
 export default function Form(): JSX.Element {
     const [qtdDoors, setQtdDoors] = useState(3)
@@ -11,7 +11,7 @@ export default function Form(): JSX.Element {
             <Content>
                 <Card bgcolor="#c0392c"><h1>Monty Hall</h1></Card>
                 <Card>
-                    <EntryNumeric
+                    <EntryNum
                         text="Qtd Doors?"
                         value={qtdDoors}
                         onChange={(newQtdDoors: SetStateAction<number>) => setQtdDoors(newQtdDoors)}
@@ -20,7 +20,7 @@ export default function Form(): JSX.Element {
             </Content>
             <Content>
                 <Card>
-                    <EntryNumeric
+                    <EntryNum
                         text="Porta com presente?"
                         value={doorsWithGif}
                         onChange={(newDoorsWithGif: SetStateAction<number>) => setDoorsWithGif(newDoorsWithGif)}
