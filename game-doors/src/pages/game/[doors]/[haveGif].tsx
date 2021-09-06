@@ -9,7 +9,16 @@ import { useRouter } from 'next/router'
 
 export default function Game(): JSX.Element {
     const router = useRouter()
+    const [validate, setValidate] = useState(false)
     const [doors, setDoors] = useState([])
+
+    useEffect(() => {
+        const doors = router.query.doors
+        const haveGif = router.query.haveGif
+        const doorsValidate = doors >= 3 && doors <= 50
+        const haveGifValidate = haveGif >= 1 && haveGif <= doors
+        setValidate(doorsValidate && haveGifValidate)
+    }, [doors])
 
     useEffect(() => {
         const doors = router.query.doors
@@ -30,7 +39,7 @@ export default function Game(): JSX.Element {
     return (
         <Container>
             <Content>
-                {renderDoors()}
+                {validate ? renderDoors() : <h1>Por favor, insira valores válidos!</h1>}
             </Content>
             <NavigationBar>
                 <Link href="/">
