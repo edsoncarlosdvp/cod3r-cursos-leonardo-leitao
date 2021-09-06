@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Button } from '@material-ui/core'
 import { Door } from '@components/Door'
-import DoorModel from '@model/DoorModel'
 import { createDoors, refreshDoors } from '@features/Doors'
 import { Container, Content, NavigationBar } from '@styles/home'
 import Link from 'next/link'
@@ -18,7 +17,7 @@ export default function Game(): JSX.Element {
         const doorsValidate = doors >= 3 && doors <= 50
         const haveGifValidate = haveGif >= 1 && haveGif <= doors
         setValidate(doorsValidate && haveGifValidate)
-    }, [doors])
+    }, [doors, router.query.doors, router.query.haveGif])
 
     useEffect(() => {
         const doors = router.query.doors
