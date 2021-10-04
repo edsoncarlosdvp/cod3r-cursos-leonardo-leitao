@@ -5,7 +5,7 @@ function numRandom(min = 1, max = 100000) {
   return Math.random() * (max - min) + min
 }
 
-export default function handler(
+export default function apiProducts(
   req: NextApiRequest,
   res: NextApiResponse
 ) {

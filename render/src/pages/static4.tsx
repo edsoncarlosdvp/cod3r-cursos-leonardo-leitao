@@ -1,6 +1,6 @@
 export async function getStaticProps() {
     console.log('[Server] gerando props...')
-    const res = await fetch('http://localhost:3000/services/api/products')
+    const res = await fetch('http://localhost:3000/src/services/api/products')
     const products = await res.json()
 
     return {
