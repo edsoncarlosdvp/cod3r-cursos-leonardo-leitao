@@ -9,19 +9,20 @@ interface studentProps {
     email: string
 }
 
-export function getStaticPaths() {
+export async function getStaticPaths() {
+    const res = await fetch('http://localhost:3000/src/services/api/students/tutors')
+    const ids = await res.json()
+
+    const paths = ids.map((id: string) => {
+        return { params: { id: `${id}` } }
+    })
     return {
-        fallback: false,
-        paths: [
-            { params: { id: '107' } },
-            { params: { id: '203' } },
-            { params: { id: '1345' } },
-        ]
+        fallback: true,
+        paths
     }
 }
 
 export async function getStaticProps(ctx: paramsProps) {
-    // const params = ctx.params as paramsProps
     const res = await fetch(`http://localhost:3000/src/services/api/students/${ctx.params.id}`)
     const student = await res.json()
 
