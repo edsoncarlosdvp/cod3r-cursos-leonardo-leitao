@@ -1,34 +1,39 @@
-import AnswerModel from './answer'
+import AnswerModel from './answer';
 
 export default class QuestionModel {
-    #id: number
-    #question: string
-    #answers: AnswerModel[]
-    #correct: boolean
-    
-    constructor(id: number, question: string, answers: AnswerModel[], correct: boolean) {
-        this.#id = id
-        this.#question = question
-        this.#answers = answers
-        this.#correct = correct
-    }
+  #id: number;
+  #question: string;
+  #answers: AnswerModel[];
+  #correct: boolean;
 
-    get id() {
-        return this.#id
-    }
+  constructor(
+    id: number,
+    question: string,
+    answers: AnswerModel[],
+    correct: boolean = false
+  ) {
+    this.#id = id;
+    this.#question = question;
+    this.#answers = answers;
+    this.#correct = correct;
+  }
 
-    get question() {
-        return this.#question
-    }
+  get id() {
+    return this.#id;
+  }
 
-    get answers() {
-        for (let answers of this.#answers) {
-            if (answers.reveal) return true
-        }
-        return this.#answers
-    }
+  get question() {
+    return this.#question;
+  }
 
-    get correct() {
-        return this.#correct
+  get answers() {
+    for (let answers of this.#answers) {
+      if (answers.reveal) return true;
     }
+    return this.#answers;
+  }
+
+  get correct() {
+    return this.#correct;
+  }
 }

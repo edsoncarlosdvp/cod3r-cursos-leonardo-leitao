@@ -1,23 +1,31 @@
-export default class AnswerModel{
-    #value: string
-    #hit: boolean
-    #reveal: boolean
+export default class AnswerModel {
+  #value: string;
+  #hit: boolean;
+  #reveal: boolean;
 
-    constructor(value: string, hit: boolean, reveal = false) {
-        this.#value = value
-        this.#hit = hit
-        this.#reveal = reveal
-    }
+  constructor(value: string, hit: boolean, reveal = false) {
+    this.#value = value;
+    this.#hit = hit;
+    this.#reveal = reveal;
+  }
 
-    get value() {
-        return this.#value
-    }
+  static correct(value: string) {
+    return new AnswerModel(value, true);
+  }
 
-    get hit() {
-        return this.#hit
-    }
+  static wrong(value: string) {
+    return new AnswerModel(value, false);
+  }
 
-    get reveal() {
-        return this.#reveal
-    }
+  get value() {
+    return this.#value;
+  }
+
+  get hit() {
+    return this.#hit;
+  }
+
+  get reveal() {
+    return this.#reveal;
+  }
 }
