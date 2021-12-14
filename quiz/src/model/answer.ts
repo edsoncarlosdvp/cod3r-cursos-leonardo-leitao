@@ -28,4 +28,12 @@ export default class AnswerModel {
   get reveal() {
     return this.#reveal;
   }
+
+  convertToObject() {
+    return {
+      value: this.#value,
+      hit: this.#hit,
+      reveal: this.#reveal
+    }
+  }
 }

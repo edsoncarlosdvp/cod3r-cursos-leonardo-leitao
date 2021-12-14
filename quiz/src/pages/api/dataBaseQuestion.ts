@@ -1,6 +1,7 @@
-import AnswerModel from '../model/answer';
-import QuestionModel from '../model/question';
-const question: QuestionModel[] = [
+import AnswerModel from '../../model/answer';
+import QuestionModel from '../../model/question';
+
+const questions: QuestionModel[] = [
   new QuestionModel(306, 'Qual o inseto que transmite a doença de Chagas?', [
     AnswerModel.wrong('Abelha'),
     AnswerModel.wrong('Barata'),
@@ -19,4 +20,4 @@ const question: QuestionModel[] = [
   ),
 ];
 
-export default question;
+export default questions;

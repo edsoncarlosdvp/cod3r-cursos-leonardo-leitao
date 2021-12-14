@@ -36,4 +36,13 @@ export default class QuestionModel {
   get correct() {
     return this.#correct;
   }
+
+  convertToObject() {
+    return {
+      id: this.#id,
+      question: this.#question,
+      answers: this.#answers.map(answer => answer.convertToObject()),
+      correct: this.#correct
+    }
+  }
 }
